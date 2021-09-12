@@ -15,3 +15,9 @@ func IntToHex(num int64) []byte {
 
 	return buff.Bytes()
 }
+
+func ReverseBytes(arr []byte) {
+	for i, j := 0, len(arr)-1; i < j; i, j = i+1, j-1 {
+		arr[i], arr[j] = arr[j], arr[i]
+	}
+}
